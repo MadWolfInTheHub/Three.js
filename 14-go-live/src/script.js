@@ -21,7 +21,7 @@ const scene = new THREE.Scene()
  * Textures
  */
 const textureLoader = new THREE.TextureLoader()
-const matcapTexture = textureLoader.load('textures/matcaps/8.png')
+const matcapTexture = textureLoader.load('textures/matcaps/2.png')
 
 /**
  * Fonts
@@ -58,12 +58,12 @@ fontLoader.load(
         // Donuts
         const donutGeometry = new THREE.TorusGeometry(0.3, 0.2, 32, 64)
 
-        for(let i = 0; i < 100; i++)
+        for(let i = 0; i < 1000; i++)
         {
             const donut = new THREE.Mesh(donutGeometry, material)
-            donut.position.x = (Math.random() - 0.5) * 10
-            donut.position.y = (Math.random() - 0.5) * 10
-            donut.position.z = (Math.random() - 0.5) * 10
+            donut.position.x = (Math.random() - 0.5) * 100
+            donut.position.y = (Math.random() - 0.5) * 100
+            donut.position.z = (Math.random() - 0.5) * 100
             donut.rotation.x = Math.random() * Math.PI
             donut.rotation.y = Math.random() * Math.PI
             const scale = Math.random()
@@ -102,9 +102,9 @@ window.addEventListener('resize', () =>
  */
 // Base camera
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
-camera.position.x = 1
-camera.position.y = 1
-camera.position.z = 2
+camera.position.x = 1.5
+camera.position.y = 1.5
+camera.position.z = 4
 scene.add(camera)
 
 // Controls
